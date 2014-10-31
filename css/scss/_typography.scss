@@ -1,0 +1,74 @@
+@import "//fast.fonts.net/cssapi/e65642ec-ec93-4ff8-8b77-891e87b12e4e.css";
+@import "//fonts.googleapis.com/css?family=Open+Sans:600";
+
+// ==========================================================================
+// Typographic Styles
+// ==========================================================================
+
+@mixin utopia{
+	font-family:'Utopia W01';
+}
+@mixin kepler{
+	font-family:'Kepler W01 Caption';
+	font-weight: 200;
+}
+@mixin open{
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	font-size: 0.875em;
+	color: #5f6a7d;
+	@include kepler;
+}
+
+p{
+	line-height: 1.8;
+}
+
+a{
+	color: #2586b7;
+	@include transition(color, .3s);
+
+	&:hover{
+		color: #1b6185;
+	}
+}
+
+h1,h2,h3,h4,h5,h6{
+	@include utopia;
+	font-weight: 400;
+}
+
+blockquote{
+	margin: 0;
+	@include open;
+
+	p{
+		line-height: 1.4;
+	}
+}
+
+.emphasis{
+	color: #2e3b4e;
+}
+
+.xlarge-30px{
+	font-size: 30px;
+}
+
+.large-24px{
+	font-size: 24px;
+}
+
+.medium-21px{
+	font-size: 21px;
+}
+
+.small-18px{
+	font-size: 18px;
+}
+
+.xsmall-14px{
+	font-size: 14px;
+}

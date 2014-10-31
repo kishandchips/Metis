@@ -1,0 +1,611 @@
+// ==========================================================================
+// Page Specific
+// ==========================================================================
+
+// ==========================================================================
+// HOME
+// ==========================================================================
+
+#home{
+
+	#slider{
+
+		.owl-item.active{
+			.slide-content{
+				@include opacity(1);
+			}
+		}
+
+		.slide{
+			position: relative;
+		}
+		
+		.slide-content{
+			position: absolute;
+			z-index: 10;
+			width: 50%;
+			max-width: 600px;
+			padding: 1em 2em 2.5em 2em;
+			color: #fff;
+			background-color: rgba(#3b547f, 0.8);
+			@include opacity(0);
+			@include single-transition(opacity,1s);
+
+			&.top-left{
+				top: 2em;
+				left: 2em;
+			}
+
+			&.bottom-left{
+				bottom: 2em;
+				left: 2em;
+			}
+
+			&.top-right{
+				top: 2em;
+				right: 2em;
+			}
+
+			&.bottom-right{
+				bottom: 2em;
+				right: 2em;
+			}
+
+			@media screen and (max-width: 700px){
+				position: relative;
+				top: auto !important;
+				left: auto !important;
+				right: auto !important;
+				bottom: auto !important; 
+				width: 100%;
+				max-width: inherit;
+				background-color: rgba(#3b547f, 1);
+			}
+		}
+
+		figure{
+			position: relative;
+			min-height: 450px;
+			background-size: cover;
+			background-position: center;
+
+			@media screen and (max-width: 700px){
+				min-height: 300px;
+			}
+
+			&:after{
+				content:"";
+				display: inline-block;
+				position: absolute;
+				bottom:0;
+				left:0;
+				width: 100%;
+				height: 50px;
+				// needs latest Compass, add '@import "compass"' to your scss
+				@include filter-gradient(#000000, #000000, vertical); // IE6-9
+				@include background-image(linear-gradient(top,  rgba(0,0,0,0) 20%,rgba(0,0,0,1) 120%));
+
+			}
+
+			img{
+				position:absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+			}
+		}
+	}// #slider
+
+	.welcome{
+		background-color: #f5f5f5;
+
+		.hide-content{
+			position: relative;
+			max-height: 400px;
+			overflow: hidden;
+			@include transition(all,1s);
+
+			&:after{
+				content:"";
+				display: inline-block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height:200px;
+				@include opacity(1);
+				// needs latest Compass, add '@import "compass"' to your scss
+				// needs latest Compass, add '@import "compass"' to your scss
+				@include filter-gradient(#ffffff, #f5f5f5, vertical); // IE6-9
+				@include background-image(linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(245,245,245,1) 100%));
+
+			}
+
+			&.visible{
+				max-height: 2000px;
+
+				&:after{
+					@include opacity(0);
+				}
+			}
+		}
+
+		.show-content{
+			text-align: center;
+		}
+	}
+
+
+	.home-three{
+		.images{
+			width: 90%;
+			max-width: 1050px;
+			margin: 3em auto 0 auto;
+
+			.col-3-5, .col-2-5{
+				@media screen and (max-width:750px){
+					width: 100%;
+					padding: 1em 0;
+					text-align: center;
+				}
+			}
+		}
+
+		blockquote{
+			font-size: 1.5em;
+		}
+	}
+}// #home
+
+// ==========================================================================
+// OPPORTUNITY
+// ==========================================================================
+
+#opportunity{
+	ul.points{
+		margin:0;
+		padding:0;
+		list-style-type: none;
+		text-align: center;
+
+		.icon-tick{
+			color: #2586b7;
+			font-size: 2em;
+		}
+
+		li{
+			display: inline-block;
+			width: 49%;
+			margin-bottom: 2em;
+			padding:0 1.5em;
+			vertical-align: top;
+
+			p{
+				margin-top: 0;
+			}
+
+			@media screen and (max-width: 600px){
+				width: 100%;
+			}
+		}
+	}// .points
+	
+	.propositions{
+		padding-top: 2em;
+	}
+
+	.proposition-item{
+		padding:2em 4em 2em 4em;
+		text-align: center;
+		border-left: 1px solid #e8e8e8;
+		border-top: 1px solid #e8e8e8;
+
+		@media screen and (max-width: 1050px){
+			padding: 2em 2em 2em 2em;
+		}
+		@media screen and (max-width: 750px){
+			width: 100%;
+			padding: 2em 2em 2em 2em;
+		}
+
+		&:first-child{
+			border-left: none;
+		}
+
+		i{
+			color: #e0e0e0;
+			font-size: 3em;
+		}
+
+		h3{
+			color: #2586b7;
+			@include open;
+			font-size: 1em;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+
+}// #opportunity
+
+// ==========================================================================
+// TEAM
+// ==========================================================================
+
+#team{
+	.members{
+		border-bottom: 1px solid #e8e8e8;
+	}
+
+	.members-list{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	.member{
+		margin-bottom: 4em;
+		padding: 0 2em;
+
+		@media screen and (max-width: 1000px){
+			padding: 0 1em;
+		}
+
+		@media screen and (max-width: 750px){
+			width: 50%;
+		}
+
+		@media screen and (max-width: 550px){
+			width: 100%;
+		}
+	
+		figure{
+			text-align: center;
+		}
+
+		h3{
+			margin: 1em 0 0.5em 0;
+			color: #2e3b4e;
+			font-size: 1.5em;
+			@include kepler;
+			text-align: center;
+			line-height: 1;
+		}
+
+		h4{
+			margin: 0 0 1em 0;
+			color: #2586b7;
+			font-size: 0.8125em;
+			@include open;
+			font-weight: 600;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+
+}// #team
+
+// ==========================================================================
+// BLOG
+// ==========================================================================
+
+#blog{
+	article{
+		margin-bottom: 20px;
+
+		@media screen and (max-width: 750px){
+			width: 50%;
+		}
+		@media screen and (max-width: 600px){
+			width: 100%;
+		}
+
+		figure{
+			height: 250px;
+			background-size: cover;
+			background-position: center;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		.article-meta{
+			position: relative;
+			padding: 1.2em 2em 2.5em 2em;
+			background-color: #f5f5f5;
+			@include transition(all,.3s);
+
+			.article-title{
+				margin-top: 0;
+				margin-bottom: 1em;
+				color: #2e3b4e;
+				font-size: 1.5em;
+			}
+
+			.article-date{
+				position: absolute;
+				bottom: 1.2em;
+				left: 2em;
+				margin:0;
+				color: #b4b4b3;
+				@include open;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+		}
+
+		&:hover{
+			.article-meta{
+				background-color:#e5e5e5;
+			}
+		}
+	}// article
+	
+	.pagination{
+		padding: 1em 0;
+		text-align: center;
+
+		.next{
+			display: inline-block;
+		}
+	}
+}// #blog
+
+// ==========================================================================
+// SINGLE
+// ==========================================================================
+
+#single{
+	background-color: #f5f5f5;
+
+	article{
+
+		.post-image{
+			position: relative;
+			height: 450px;
+
+			img{
+				position:absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				opacity: 0;
+				z-index: 0;
+			}
+		}
+
+		.post-content{
+			position: relative;
+			margin:-4em 0 4em 0;
+			padding: 4em 5.5em;
+			font-size: 1.143em;
+			background-color: #fff;
+			border: 1px solid #d9d9d9;
+			z-index: 5;
+
+			@media screen and (max-width: 1050px){
+				padding: 4em 4em;
+			}
+			@media screen and (max-width: 750px){
+				font-size: 1em;
+			}
+			@media screen and (max-width: 600px){
+				padding: 2em;
+				font-size: 1em;
+			}
+
+			header{
+
+				.col-2-3, .col-1-3{
+					@media screen and (max-width: 600px){
+						width: 100%;
+					}
+				}
+
+				.post-title{
+					margin:0;
+					color: #2e3b4e;
+					font-size: 1.5em;
+				}
+
+				.post-date{
+					margin: 0;
+					color: #2586b7;
+					font-size: 0.875em;
+					@include open;
+					font-weight: bold;
+					text-transform: uppercase;
+				}					
+			}
+
+			.inner{
+				padding-bottom: 1em;
+				border-bottom: 1px solid #d9d9d9;
+
+				blockquote{
+					margin:1em 2em;
+					padding: 0 0 0 2em;
+					font-size: 1.125em;
+					border-left: 5px solid #2586B7;
+				}
+			}
+
+			footer{
+				.social-links{
+					margin:2em 0;
+
+					span{
+						margin-right: 1em;
+					}
+				}
+
+				.navigation{
+					> div{
+						position: relative;
+						width: 50%;
+					}
+
+					.previous{
+						padding-left: 40px;
+						text-align: left;
+
+						@media screen and (max-width: 500px){
+							padding: 0;
+						}
+
+						i{
+							left: 0;
+						}
+					}
+
+					.next{
+						padding-right: 40px;
+						text-align: right;
+
+						@media screen and (max-width: 500px){
+							padding: 0;
+						}
+
+						i{
+							right: 0;
+						}
+					}
+
+					.navigation-meta{
+						display: inline-block;
+						
+						span{
+							color: #2e3b4e;
+							font-size: 1.3125em;
+						}
+
+						.title{
+							margin-top: 0;
+							font-size: 0.685em;
+							@include open;
+							font-weight: 600;
+							text-transform: uppercase;
+						}
+					}
+
+					a{
+						text-decoration: none;
+					}
+
+					i{
+						position: absolute;
+						top: 0;
+						display: inline-block;
+						color: #2e3b4e;
+						font-size: 2em;
+						vertical-align: top;
+
+						@media screen and (max-width: 500px){
+							display: none;
+						}
+					}
+				
+				}// .navigation
+
+			}// footer
+
+		}// .post-content
+
+	}// article
+
+	.social-links{
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: right;
+
+		li{
+			display: inline-block;
+		}
+
+		a{
+			color: #fff;
+			font-size: 1.125em;
+		}
+
+		i{
+			display: inline-block;
+			padding: 5px;
+		}
+
+		.icon-facebook{
+			background-color: #3B5998;
+		}
+		.icon-google{
+			background-color: #dd4b39;
+		}
+		.icon-twitter{
+			background-color: #55ACEE;
+		}
+		.icon-linkedin{
+			background-color: #287BBC;
+		}
+		.icon-mail{
+			background-color: #002233;
+		}
+	}// .social-links
+
+}// #single
+
+// ==========================================================================
+// CONTACT
+// ==========================================================================
+
+#contact{
+
+	.form{
+		margin-bottom: 4em;
+	}
+
+	.contact-details{
+		margin:0;
+		padding:0;
+		list-style-type: none;
+		text-align: center;
+
+		.contact-detail{
+			display: inline-block;
+			max-width: 300px;
+			margin-left: 4em;
+			font-size: 1.143em;
+			vertical-align: top;
+
+			@media screen and (max-width: 700px){
+				max-width: 100%;
+				width: 100%;
+				margin: 1em 0 0 0;
+
+				&:first-child{
+					margin-top: 0;
+				}
+			}
+
+			&:first-child{
+				margin-left: 0;
+			}
+		}
+
+		.location-title{
+			@include open;
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+	}
+}
+
+// ==========================================================================
+// CONTACT
+// ==========================================================================
+
+#fohohfoh{
+	text-align: center;
+}

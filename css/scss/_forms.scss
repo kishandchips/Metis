@@ -1,0 +1,93 @@
+// ==========================================================================
+// Form Styles
+// ==========================================================================
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea{
+	color: #2e3b4e;
+	font-size: 1.143em !important;
+	padding: 1em !important;
+	background-color: #dddddd;
+	border: 1px solid #cfcfcf;
+	@include border-radius(2px);
+}
+
+input[type="submit"]{
+	@extend .btn;
+	color: #fff;
+	background-color: #2586b7;
+
+	&:hover{
+		background-color: #1b6185;
+	}
+}
+
+.gform_wrapper{
+	width: 70% !important;
+	margin: 0 auto !important;
+
+	@media screen and (max-width: 1000px){
+		width: 100% !important;
+	}
+
+	.gform_heading{
+		width: 100% !important;
+		margin: 0;
+		padding: 4em 0;
+		text-align: center;
+
+		.gform_title{
+			width: 100%;
+			margin:0 0 0.5em 0;
+			color: #2e3b4e;
+			font-size: 2.143em;
+			font-weight: normal;
+		}
+	}
+
+	.gform_body{
+		width: 70%;
+		margin: 0 auto;
+
+		@media screen and (max-width: 1200px){
+			width: 90%;
+		}
+		@media screen and (max-width: 1000px){
+			width: 100%;
+		}
+
+		.gfield{
+			margin-bottom: 0.5em;
+		}
+
+		.gfield_label{
+			color: #2e3b4e;
+			font-size: 1.143em;
+			@include utopia;
+			font-weight: normal !important;
+		}
+
+		input.medium{
+			width: 100% !important;
+		}
+
+		textarea{
+			width: 100% !important;
+		}
+	}
+
+	.gform_footer{
+		width: 70%;
+		margin: 0 auto !important;
+		text-align: right;
+
+		@media screen and (max-width: 1200px){
+			width: 90%;
+		}
+		@media screen and (max-width: 1000px){
+			width: 100%;
+		}
+	}
+}

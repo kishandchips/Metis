@@ -1,0 +1,130 @@
+// ==========================================================================
+// Base styles
+// ==========================================================================
+
+html, body{
+    min-height: 100% !important;
+}
+
+body {
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.srt{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    margin: 1px;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.invisible {
+    @include opacity(0);
+    visibility: hidden;
+}
+
+.visible{
+    @include opacity(1);
+    visibility: visible;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.left{
+	float:left;
+}
+
+.right{
+	float:right;
+}
+
+.valign{
+	position: absolute;
+	top:50%;
+    width: 100%;
+	@include translateY(-50%);
+}
+
+/* WORDPRESS IMAGE */
+
+.alignleft {
+    float: left;
+    margin-top: 1em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+}
+.alignright {
+    float: right;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+.aligncenter {
+    display: block;
+    margin: 2em auto;
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+    border: 1px solid #ddd;
+}
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+    max-width: 100%;
+    height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+/* Make sure videos and embeds fit their containers */
+embed,
+iframe,
+object,
+video {
+    max-width: 100%;
+}
+
+.wp-caption {
+    /*background: #fff;*/
+    /*border: 1px solid #f0f0f0;*/
+    max-width: 96%; /* Image does not overflow the content area */
+    /*padding: 5px 3px 10px;*/
+    /*text-align: center;*/
+}
+
+.wp-caption-text{
+    margin-bottom: 0;
+    padding: 0 0.5em;
+    color: #333;
+    font-size: 0.75em;
+    font-style: italic;
+    line-height: 1.1;
+}
