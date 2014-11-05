@@ -6,33 +6,15 @@
 					<?php while(have_rows('slides')): the_row(); ?>
 					<?php $image = get_sub_field('slide_image'); ?>
 
-					<div class="slide <?php if(get_sub_field('display_content')): ?>has-content<?php endif; ?>">
+					<div class="slide">
 						<figure style="background-image:url(<?php echo $image['sizes']['slider-image'] ?>)">
 							<img src="<?php bloginfo('stylesheet_directory');?>/img/temp/slider.jpg" alt="">
-
-							<div class="slider-controls">
-								<button class="button slider-prev">
-									<i class="icon-arrowleft"></i>
-								</button>
-								<button class="button slider-next"> 
-									<i class="icon-arrowright"></i>
-								</button>
-							</div>
 						</figure>
-
+						
 						<?php if(get_sub_field('display_content')): ?>
-							<div class="slide-content <?php if(get_sub_field('content_position')){ the_sub_field('content_position'); } ?>">
-								<?php the_sub_field('slide_content'); ?>
-
-								<div class="slider-controls">
-									<button class="button slider-prev">
-										<i class="icon-arrowleft"></i>
-									</button>
-									<button class="button slider-next"> 
-										<i class="icon-arrowright"></i>
-									</button>
-								</div>
-							</div>
+						<div class="slide-content <?php if(get_sub_field('content_position')){ the_sub_field('content_position'); } ?>">
+							<?php the_sub_field('slide_content'); ?>
+						</div>
 						<?php endif; ?>
 
 					</div>

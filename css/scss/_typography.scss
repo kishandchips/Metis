@@ -1,5 +1,5 @@
 @import "//fast.fonts.net/cssapi/e65642ec-ec93-4ff8-8b77-891e87b12e4e.css";
-@import "//fonts.googleapis.com/css?family=Open+Sans:600";
+@import "//fonts.googleapis.com/css?family=Open+Sans:600|Droid+Serif:400,700,400italic";
 
 // ==========================================================================
 // Typographic Styles
@@ -8,9 +8,9 @@
 @mixin utopia{
 	font-family:'Utopia W01';
 }
-@mixin kepler{
-	font-family:'Kepler W01 Caption';
-	font-weight: 200;
+@mixin droid{
+	font-family: 'Droid Serif', serif;
+	font-weight: 400;
 }
 @mixin open{
 	font-family: 'Open Sans', sans-serif;
@@ -19,13 +19,18 @@
 body{
 	font-size: 0.875em;
 	color: #5f6a7d;
-	@include kepler;
+	@include droid;
 }
 
 p{
 	line-height: 1.8;
 }
 
+hr{
+	margin: 2em 0;
+	border:1px solid #e1e1e1;
+	border-bottom:none;
+}
 a{
 	color: #2586b7;
 	@include transition(color, .3s);
@@ -42,7 +47,7 @@ h1,h2,h3,h4,h5,h6{
 
 blockquote{
 	margin: 0;
-	@include open;
+	@include utopia;
 
 	p{
 		line-height: 1.4;

@@ -22,7 +22,7 @@
         <div id="header">
             <div class="logo">
                 <a href="<?php bloginfo('home' ); ?> ">
-                    <img src="<?php bloginfo('stylesheet_directory');?>/img/logo.jpg" alt="Metis Logo">
+                    <img src="<?php bloginfo('stylesheet_directory');?>/img/metis-logo.svg" alt="Metis Logo">
                 </a>
             </div>
 

@@ -43,12 +43,17 @@
 				var slider = $("#slider");
 
 				slider.owlCarousel({
-					slideSpeed : 300,
-					paginationSpeed : 400,
-					singleItem: true,
-					addClassActive: true,
+					items: 1,
 					autoHeight: true,
-					autoPlay: 4000
+					loop: true,
+					nav: true,
+					navText: "",
+					dots: true,
+					autoplay: true,
+					autoplayTimeout: 5000,
+					autoplaySpeed: 1000,
+					navSpeed: 1000,
+					dotsSpeed: 1000
 				});
 
 				$('.slider-prev').on('click', function(){

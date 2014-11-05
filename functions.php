@@ -1,5 +1,6 @@
 <?php
-define('THEME_NAME', ' ');
+define('THEME_NAME', 'Metis');
+$template_directory_uri = get_template_directory_uri();
 
 // Enable Features
 	add_theme_support( 'post-thumbnails' );
@@ -23,15 +24,16 @@ function custom_styles(){
 
 function custom_scripts(){
 	global $template_directory_uri;
+	
 	wp_localize_script( 'main', 'url', array(
 		'template' => $template_directory_uri,
 		'base' => site_url(),
 	));
 	
-	wp_enqueue_script('modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.1.min.js', array('jquery'), '', false);
-	wp_enqueue_script('matchHeight', get_template_directory_uri() . '/js/vendor/jquery.matchHeight-min.js', array('jquery'), '', false);
-	wp_enqueue_script('owlCarousel', get_template_directory_uri() . '/js/vendor/owl.carousel.min.js', array('jquery'), '', true);
-	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true);
+	wp_enqueue_script('modernizr', $template_directory_uri . '/js/plugins/modernizr-2.6.1.min.js', array('jquery'), '', false);
+	wp_enqueue_script('matchHeight', $template_directory_uri . '/js/plugins/jquery.matchHeight-min.js', array('jquery'), '', false);
+	wp_enqueue_script('owlCarousel', $template_directory_uri . '/js/plugins/owl.carousel.min.js', array('jquery'), '', true);
+	wp_enqueue_script('main', $template_directory_uri . '/js/main.js', array('jquery'), '', true);
 }
 
 // Add Actions

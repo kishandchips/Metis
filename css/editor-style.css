@@ -1,60 +1,66 @@
 @import "//fast.fonts.net/cssapi/e65642ec-ec93-4ff8-8b77-891e87b12e4e.css";
-@import "//fonts.googleapis.com/css?family=Open+Sans:600";
+@import "//fonts.googleapis.com/css?family=Open+Sans:600|Droid+Serif:400,700,400italic";
 /* line 19, scss/_typography.scss */
 body {
   font-size: 0.875em;
   color: #5f6a7d;
-  font-family: 'Kepler W01 Caption';
-  font-weight: 200; }
+  font-family: 'Droid Serif', serif;
+  font-weight: 400; }
 
 /* line 25, scss/_typography.scss */
 p {
   line-height: 1.8; }
 
 /* line 29, scss/_typography.scss */
+hr {
+  margin: 2em 0;
+  border: 1px solid #e1e1e1;
+  border-bottom: none; }
+
+/* line 34, scss/_typography.scss */
 a {
   color: #2586b7;
   -moz-transition: color, 0.3s;
   -o-transition: color, 0.3s;
   -webkit-transition: color, 0.3s;
   transition: color, 0.3s; }
-  /* line 33, scss/_typography.scss */
+  /* line 38, scss/_typography.scss */
   a:hover {
     color: #1b6185; }
 
-/* line 38, scss/_typography.scss */
+/* line 43, scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Utopia W01';
   font-weight: 400; }
 
-/* line 43, scss/_typography.scss */
+/* line 48, scss/_typography.scss */
 blockquote {
   margin: 0;
-  font-family: 'Open Sans', sans-serif; }
-  /* line 47, scss/_typography.scss */
+  font-family: 'Utopia W01'; }
+  /* line 52, scss/_typography.scss */
   blockquote p {
     line-height: 1.4; }
 
-/* line 52, scss/_typography.scss */
+/* line 57, scss/_typography.scss */
 .emphasis {
   color: #2e3b4e; }
 
-/* line 56, scss/_typography.scss */
+/* line 61, scss/_typography.scss */
 .xlarge-30px {
   font-size: 30px; }
 
-/* line 60, scss/_typography.scss */
+/* line 65, scss/_typography.scss */
 .large-24px {
   font-size: 24px; }
 
-/* line 64, scss/_typography.scss */
+/* line 69, scss/_typography.scss */
 .medium-21px {
   font-size: 21px; }
 
-/* line 68, scss/_typography.scss */
+/* line 73, scss/_typography.scss */
 .small-18px {
   font-size: 18px; }
 
-/* line 72, scss/_typography.scss */
+/* line 77, scss/_typography.scss */
 .xsmall-14px {
   font-size: 14px; }
